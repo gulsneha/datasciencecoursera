@@ -1,0 +1,17 @@
+Reproducible Research - Peer Assessment 1
+=========================================
+
+## Loading data for the assignment
+```{r results="hide"}
+activity <- read.csv("activity.csv")
+activity
+```
+## Mean total number of steps taken per day
+```{r}
+activity<- read.csv("activity.csv")
+good <-complete.cases(activity)
+clean <- activity[good, ]
+clean
+summary(clean$steps)
+hist(clean$steps, col="green")
+```
